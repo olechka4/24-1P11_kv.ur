@@ -13,3 +13,5 @@ if disk > 0:
 if disk == 0:
     x = -b/2*a
     print("x = ", x)
+if disk < 0:
+    print("Корней нет")
