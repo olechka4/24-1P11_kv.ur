@@ -1,8 +1,11 @@
+'''Тест квадратного уравнения'''
+
 import unittest
 from main import cvyr
 
 
 class TestKv(unittest.TestCase):
+    '''Кв уравн'''
     def test_1(self):
         """Тест диск больше нуля"""
         a, b, c = 4, 2, -2
