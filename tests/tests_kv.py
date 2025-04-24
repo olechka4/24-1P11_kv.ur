@@ -10,8 +10,8 @@ class TestKv(unittest.TestCase):
         """Тест диск больше нуля"""
         a, b, c = 4, 2, -2
         disk = 36
-        x1 = -1
-        x2 = 0.5
+        x1 = 0.5
+        x2 = -1
         res = cvyr(a, b, c)
         self.assertEqual(len(res), 4, "Неверное количество элементов")
         self.assertEqual(
