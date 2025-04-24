@@ -21,3 +21,17 @@ class TestKv(unittest.TestCase):
         self.assertEqual(res[1], disk, "Неверный дискриминант")
         self.assertEqual(res[2], x1, "Неверный корень 1")
         self.assertEqual(res[3], x2, "Неверный корень 2")
+
+    def test_2(self):
+        """Тест диск равен нуля"""
+        a, b, c = 3, -18, 27
+        disk = 0
+        x = 3
+        res = cvyr(a, b, c)
+        self.assertEqual(len(res), 3, "Неверное количество элементов")
+        self.assertEqual(
+            res[0],
+            "Дискриминант = 0, квадратное уравнение имеет 1 корень"
+        )
+        self.assertEqual(res[1], disk, "Неверный дискриминант")
+        self.assertEqual(res[2], x, "Неверный корень 1")
