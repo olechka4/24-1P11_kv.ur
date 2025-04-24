@@ -22,5 +22,5 @@ def cvyr(a, b, c):
     if disk == 0:
         x = -b/2*a
         return "Дискриминант = 0, квадратное уравнение имеет 1 корень", disk, x
-    if disk < 0:
-        return "Корней нет", disk
+
+    return "Корней нет", disk
