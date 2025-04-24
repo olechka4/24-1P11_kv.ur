@@ -1,11 +1,12 @@
-'''Тест квадратного уравнения'''
+"""Тест квадратного уравнения"""
 
 import unittest
 from main import cvyr
 
 
 class TestKv(unittest.TestCase):
-    '''Кв уравн'''
+    """Кв уравн"""
+
     def test_1(self):
         """Тест диск больше нуля"""
         a, b, c = 4, 2, -2
@@ -30,8 +31,7 @@ class TestKv(unittest.TestCase):
         res = cvyr(a, b, c)
         self.assertEqual(len(res), 3, "Неверное количество элементов")
         self.assertEqual(
-            res[0],
-            "Дискриминант = 0, квадратное уравнение имеет 1 корень"
+            res[0], "Дискриминант = 0, квадратное уравнение имеет 1 корень"
         )
         self.assertEqual(res[1], disk, "Неверный дискриминант")
         self.assertEqual(res[2], x, "Неверный корень 1")
@@ -42,8 +42,14 @@ class TestKv(unittest.TestCase):
         disk = -4
         res = cvyr(a, b, c)
         self.assertEqual(len(res), 2, "Неверное количество элементов")
-        self.assertEqual(
-            res[0],
-            "Корней нет"
-        )
+        self.assertEqual(res[0], "Корней нет")
+        self.assertEqual(res[1], disk, "Неверный дискриминант")
+
+    def test_5(self):
+        """Тест диск равен нуля"""
+        a, b, c = 0, 0, -4
+        disk = 0
+        res = cvyr(a, b, c)
+        self.assertEqual(len(res), 3, "Неверное количество элементов")
+        self.assertEqual(res[0], "Дискриминант = 0, линейное уравнение")
         self.assertEqual(res[1], disk, "Неверный дискриминант")
