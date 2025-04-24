@@ -15,3 +15,4 @@ if disk == 0:
     print("x = ", x)
 if disk < 0:
     print("Корней нет")
+
