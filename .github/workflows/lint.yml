@@ -29,6 +29,11 @@ jobs:
         echo "Running flake8..."
         flake8 .
 
+    - name: Run unittests
+      run: |
+        echo "Running unittests..."
+        python -m unittest discover -s tests
+
     - name: Run pylint
       run: |
         echo "Running pylint..."
