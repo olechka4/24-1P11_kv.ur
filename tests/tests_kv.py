@@ -49,6 +49,18 @@ class TestKv(unittest.TestCase):
         )
         self.assertEqual(res[1], disk, "Неверный дискриминант")
 
+    def test_4(self):
+        """Тест для линейного уравнения"""
+        a, b, c = 0, 2, -4
+        x = 2
+        res = cvyr(a, b, c)
+        self.assertEqual(len(res), 2, "Неверное количество элементов")
+        self.assertEqual(
+            res[0],
+            "Линейное уравнение, прямая пересекает ось Оx"
+        )
+        self.assertEqual(res[1], x)
+
     def test_5(self):
         """Тест линейное уравнение"""
         a, b, c = 0, 0, -4
