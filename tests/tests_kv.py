@@ -55,4 +55,5 @@ class TestKv(unittest.TestCase):
         disk = 0
         res = cvyr(a, b, c)
         self.assertEqual(len(res), 1, "Неверное количество элементов")
-        self.assertEqual(res[1], "Корней нет", disk)
+        self.assertEqual(res[0], "Корней нет")
+        self.assertEqual(res[1], disk)
