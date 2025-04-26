@@ -47,3 +47,13 @@ class TestKv(unittest.TestCase):
             "Корней нет"
         )
         self.assertEqual(res[1], disk, "Неверный дискриминант")
+
+    def test_6(self):
+        """Линейное уравнение"""
+        a, b, c = 0, 0, 0
+        res = cvyr(a, b, c)
+        self.assertEqual(len(res), 1, "Неверное количество элементов")
+        self.assertEqual(
+            res[0],
+            "Корней нет"
+        )
