@@ -62,10 +62,9 @@ class TestKv(unittest.TestCase):
         self.assertEqual(res[1], x)
 
     def test_5(self):
-        """Тест линейное уравнение"""
+        """Тест Линейное уравнение, прямая параллельна оси Ox"""
         a, b, c = 0, 0, -4
-        disk = 0
         res = cvyr(a, b, c)
         self.assertEqual(len(res), 1, "Неверное количество элементов")
-        self.assertEqual(res[0], "Корней нет")
-        self.assertEqual(res[1], disk)
+        self.assertEqual(res[0], "Линейное уравнение")
+        self.assertEqual(res[1], "Решений нет")
