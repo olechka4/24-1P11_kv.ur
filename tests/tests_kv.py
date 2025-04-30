@@ -60,10 +60,10 @@ class TestKv(unittest.TestCase):
             "Линейное уравнение, прямая пересекает ось Оx"
         )
         self.assertEqual(res[1], x)
-        
-     def test_5(self):
+
+    def test_5(self):
         """Тест Линейное уравнение, прямая параллельна оси Ox"""
-        a, b, c = 0, 0, -4     
+        a, b, c = 0, 0, -4
         res = cvyr(a, b, c)
         self.assertEqual(len(res), 2, "Неверное количество элементов")
         self.assertEqual(
@@ -71,8 +71,8 @@ class TestKv(unittest.TestCase):
             "Линейное уравнение, прямая параллельна оси Ox"
         )
         self.assertEqual(res[1], "Решений нет")
-        
-     def test_6(self):
+
+    def test_6(self):
         """Линейное уравнение, прямая совпадает с осью Ox"""
         a, b, c = 0, 0, 0
         res = cvyr(a, b, c)
@@ -82,5 +82,3 @@ class TestKv(unittest.TestCase):
             "Линейное уравнение, прямая совпадает с осью Ox"
         )
         self.assertEqual(res[1], "Все множество решений")
-
-           
