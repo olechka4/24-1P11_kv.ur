@@ -61,12 +61,12 @@ class TestKv(unittest.TestCase):
         self.assertEqual(res[1], x)
 
     def test_5(self):
-        """Тест для квадртаного уравнения"""
+        """Тест для линейноного уравнения"""
         a, b, c = 0, 0, 5
         res = cvyr(a, b, c)
         self.assertEqual(len(res), 2, "Неверное количество элементов")
         self.assertEqual(
             res[0],
-            "Квадртатное уравнение, прямая пересекает ось Оx"
+            "Линейное уравнение, прямая параллельно оси Оx"
         )
-        self.assertEqual(res[1], "Нет решщений")
+        self.assertEqual(res[1], "Нет решений")
