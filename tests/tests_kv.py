@@ -70,5 +70,3 @@ class TestKv(unittest.TestCase):
             "Квадртатное уравнение, прямая пересекает ось Оx"
         )
         self.assertEqual(res[1], "Нет решщений")
-
-        
