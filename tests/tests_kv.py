@@ -71,3 +71,14 @@ class TestKv(unittest.TestCase):
             "Линейное уравнение, прямая параллельна оси Ox"
         )
         self.assertEqual(res[1], "Решений нет")
+
+    def test_6(self):
+        """Линейное уравнение, прямая совпадает с осью Ox"""
+        a, b, c = 0, 0, 0
+        res = cvyr(a, b, c)
+        self.assertEqual(len(res), 2, "Неверное количество элементов")
+        self.assertEqual(
+            res[0],
+            "Линейное уравнение, прямая совпадает с осью Ox"
+        )
+        self.assertEqual(res[1], "Все множество решений")
