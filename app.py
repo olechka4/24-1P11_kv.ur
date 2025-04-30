@@ -1,5 +1,6 @@
 """FastAPI квадратного уравнения"""
 from fastapi import FastAPI
+
 app = FastAPI()
 
 
