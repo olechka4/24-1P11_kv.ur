@@ -47,22 +47,26 @@ class TestKv(unittest.TestCase):
             "Корней нет"
         )
         self.assertEqual(res[1], disk, "Неверный дискриминант")
-        
-  def test_4(self):
+
+    def test_4(self):
         """Тест для линейного уравнения"""
         a, b, c = 0, 2, -4
         x = 2
-       self.assertEqual(res[1], x) "Линейное уравнение, прямая пересекает ось Оx"
+        res = cvyr(a, b, c)
+        self.assertEqual(len(res), 2, "Неверное количество элементов")
+        self.assertEqual(
+            res[0],
+            "Линейное уравнение, прямая пересекает ось Оx"
         )
-        
-  def test_6(self):
+        self.assertEqual(res[1], x)
+
+    def test_6(self):
         """Линейное уравнение, прямая совпадает с осью Ox"""
         a, b, c = 0, 0, 0
         res = cvyr(a, b, c)
         self.assertEqual(len(res), 2, "Неверное количество элементов")
         self.assertEqual(
             res[0],
-            "Все множество решений"
+            "Линейное уравнение, прямая совпадает с осью Ox"
         )
-           
-
+        self.assertEqual(res[1], "Все множество решений")
