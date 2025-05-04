@@ -81,4 +81,4 @@ class TestKv(unittest.TestCase):
             res[0],
             "Линейное уравнение, прямая совпадает с осью Ox"
         )
-        self.assertEqual(res[1], "Нет решений")
+        self.assertEqual(res[1], "Бесконечное множество решений")
