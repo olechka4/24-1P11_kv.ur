@@ -45,9 +45,9 @@ class TestKv(unittest.TestCase):
         self.assertEqual(len(res), 2, "Неверное количество элементов")
         self.assertEqual(
             res[0],
-            "Корней нет"
+            "Дискриминант меньше нуля, квадратное уравнение не имеет корней"
         )
-        self.assertEqual(res[1], disk, "Неверный дискриминант")
+        self.assertEqual(res[1], disk, "Корней нет")
 
     def test_4(self):
         """Тест для линейного уравнения"""
@@ -81,4 +81,4 @@ class TestKv(unittest.TestCase):
             res[0],
             "Линейное уравнение, прямая совпадает с осью Ox"
         )
-        self.assertEqual(res[1], "Все множество решений")
+        self.assertEqual(res[1], "Нет решений")
